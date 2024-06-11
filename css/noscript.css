@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.contents .loading:before{
+    content: "JavaScriptを有効化してください。";
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#loadingAnimation{
+    display: none;
+}
+
+.contents form{
+    display: none;
+}
