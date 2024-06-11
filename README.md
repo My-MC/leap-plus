@@ -1,2 +1,4 @@
 # LEAP+ - Dev
-leap+の開発
+LEAP+の開発レポジトリ
+
+URL: https://leap.reast.info/
