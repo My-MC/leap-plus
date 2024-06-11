@@ -1,2 +1,2 @@
-# leap-plus
+# LEAP+ - Dev
 leap+の開発
