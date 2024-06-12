@@ -1,127 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-
-<head prefix="og: https://ogp.me/ns#">
-    <meta charset="UTF-8">
+  <head prefix="og: https://ogp.me/ns#">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta property="og:title" content="LEAP+ | 英単語LEAPを完璧にするツール">
-    <meta property="og:description" content="英単語帳LEAPを覚えるのにとっつきやすいツールです。">
-    <meta property="og:url" content="https://leap.reast.info/">
-    <meta property="og:image" content="https://leap.reast.info/images/emb.png">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="LEAP+">
-    <meta name="description" content="英単語帳LEAPを覚えるのにとっつきやすいツールです。">
+    <meta property="og:title" content="LEAP+ | 英単語LEAPを完璧にするツール" />
+    <meta
+      property="og:description"
+      content="英単語帳LEAPを覚えるのにとっつきやすいツールです。"
+    />
+    <meta property="og:url" content="https://leap.reast.info/" />
+    <meta
+      property="og:image"
+      content="https://leap.reast.info/images/emb.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LEAP+" />
+    <meta
+      name="description"
+      content="英単語帳LEAPを覚えるのにとっつきやすいツールです。"
+    />
     <title>LEAP＋</title>
-    <link rel="apple-touch-icon" sizes="192x192" href="/images/touch-icon.png">
-    <link rel="icon" sizes="64x64" href="/favicon.ico">
-    <link href="./css/normalize.css" rel="stylesheet">
-    <link href="./css/style.css?20240508" rel="stylesheet">
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="/images/touch-icon.png"
+    />
+    <link rel="icon" sizes="64x64" href="/favicon.ico" />
+    <link href="./css/normalize.css" rel="stylesheet" />
+    <link href="./css/style.css?20240508" rel="stylesheet" />
     <noscript>
-        <link href="./css/noscript.css" rel="stylesheet">
+      <link href="./css/noscript.css" rel="stylesheet" />
     </noscript>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="wrapper">
-        <header id="header">
-            <h1><a href="./"><img src="./images/logo.png" alt="LEAP+ - Logo" /></a></h1>
-        </header>
+      <header id="header">
+        <h1>
+          <a href="./"><img src="./images/logo.png" alt="LEAP+ - Logo" /></a>
+        </h1>
+      </header>
 
-        <nav id="nav">
-            <p>
-                <button id="home" class="link">ホーム</button>
-                <button id="wordbook" class="link">単語帳</button>
-                <button id="settings" class="link">設定</button>
-            </p>
-        </nav>
+      <nav id="nav">
+        <p>
+          <button id="home" class="link">ホーム</button>
+          <button id="wordbook" class="link">単語帳</button>
+          <button id="settings" class="link">設定</button>
+        </p>
+      </nav>
 
-        <main id="main">
-            <div class="contents">
-                <section style="text-align: center;">
-                    <h2>ホーム</h2>
-                    <p><span style="color: #006077">LEAP+</span>へようこそ！</p>
-                    <p>このサイトはLEAPの単語を</p>
-                    <p><b>効率的に、楽しく、簡単に</b></p>
-                    <p>覚えたい人に向けて作られたサイトです。</p>
-                    <p>1プレイごとに10問、たくさん正解しよう!</p>
-                    <h3>特徴</h3>
-                    <p>単語帳を作って・単語範囲指定してプレイ</p>
-                    <p>何回プレイすれば周回できるかわかる</p>
-                    <p>見出し語のみ出題の切り替え</p>
-                    <p>時間制限のON/OFF切り替え</p>
-                    <p>英⇔和を切り替え</p>
+      <main id="main">
+        <div class="contents">
+          <section style="text-align: center">
+            <h2>ホーム</h2>
+            <p><span style="color: #006077">LEAP+</span>へようこそ！</p>
+            <p>このサイトはLEAPの単語を</p>
+            <p><b>効率的に、楽しく、簡単に</b></p>
+            <p>覚えたい人に向けて作られたサイトです。</p>
+            <p>1プレイごとに10問、たくさん正解しよう!</p>
+            <h3>特徴</h3>
+            <p>単語帳を作って・単語範囲指定してプレイ</p>
+            <p>何回プレイすれば周回できるかわかる</p>
+            <p>見出し語のみ出題の切り替え</p>
+            <p>時間制限のON/OFF切り替え</p>
+            <p>英⇔和を切り替え</p>
 
-                    <p><b>さっそくプレイしてみよう！</b></p>
-                    <button class="submit" id="play">チャレンジ！</button>
-                </section>   
-            </div>        
+            <p><b>さっそくプレイしてみよう！</b></p>
+            <button class="submit" id="play">チャレンジ！</button>
+          </section>
+        </div>
 
-            <div class="settings">
-
-                <section style="text-align: center; margin-bottom: 15px;">
-                    <h2>設定</h2>
-                    <p class="bold">チャレンジする単語の範囲</p>
-                    <p>開始する単語の番号</p>
-                    <div class="range">
-                        <input type="number" min="1" max="1935" step="10" id="first" required maxlength="4">
-                    </div>
-                    <p>終了する単語の番号</p>
-                    <div class="range">
-                        <input type="number" min="1" max="1935" step="10" id="last" required maxlength="4">
-                    </div>
-                    <p class="bold">LEAPデジタル単語帳の範囲</p>
-                    <p>開始する単語の番号</p>
-                    <div class="range">
-                        <input type="number" min="1" max="1935" step="10" id="leap_first" required maxlength="4">
-                    </div>
-                    <p>終了する単語の番号</p>
-                    <div class="range">
-                        <input type="number" min="1" max="1935" step="10" id="leap_last" required maxlength="4">
-                    </div>
-                    <p class="bold">見出し語のみにする</p>
-                    <label class="toggle-button">
-                        <input type="checkbox" id="headerOnly"/>
-                    </label>
-                    <p class="bold">英⇔和を切り替え</p>
-                    <p id="playModeStatus">英→和モード</p>
-                    <label class="toggle-button">
-                        <input type="checkbox" id="playMode"/>
-                    </label>
-                    <p class="bold">時間制限のON/OFF</p>
-                    <label class="toggle-button">
-                        <input type="checkbox" id="timeLimit"/>
-                    </label>
-                </section>
-                <button class="submit confirm" id="confirm">更新</button>
-                
+        <div class="settings">
+          <section style="text-align: center; margin-bottom: 15px">
+            <h2>設定</h2>
+            <p class="bold">チャレンジする単語の範囲</p>
+            <p>開始する単語の番号</p>
+            <div class="range">
+              <input
+                type="number"
+                min="1"
+                max="1935"
+                step="10"
+                id="first"
+                required
+                maxlength="4"
+              />
             </div>
-
-            <div class="wordbooks">
-                <h2>単語帳</h2>
-                <div>
-                    <p class="bold">LEAPデジタル単語帳</p>
-                    <button class="submit" id="leap">ペラペラめくる！</button>
-                </div>
-                <div>
-                    <p class="bold">自分の単語帳</p>
-                    <button class="submit wordbook" id="wordbook_play">この単語帳から<br>チャレンジできるように設定</button>
-                    <div class="registered_words"></div>
-                </div>
+            <p>終了する単語の番号</p>
+            <div class="range">
+              <input
+                type="number"
+                min="1"
+                max="1935"
+                step="10"
+                id="last"
+                required
+                maxlength="4"
+              />
             </div>
-
-            <div class="leap">
-
+            <p class="bold">LEAPデジタル単語帳の範囲</p>
+            <p>開始する単語の番号</p>
+            <div class="range">
+              <input
+                type="number"
+                min="1"
+                max="1935"
+                step="10"
+                id="leap_first"
+                required
+                maxlength="4"
+              />
             </div>
+            <p>終了する単語の番号</p>
+            <div class="range">
+              <input
+                type="number"
+                min="1"
+                max="1935"
+                step="10"
+                id="leap_last"
+                required
+                maxlength="4"
+              />
+            </div>
+            <p class="bold">見出し語のみにする</p>
+            <label class="toggle-button">
+              <input type="checkbox" id="headerOnly" />
+            </label>
+            <p class="bold">英⇔和を切り替え</p>
+            <p id="playModeStatus">英→和モード</p>
+            <label class="toggle-button">
+              <input type="checkbox" id="playMode" />
+            </label>
+            <p class="bold">時間制限のON/OFF</p>
+            <label class="toggle-button">
+              <input type="checkbox" id="timeLimit" />
+            </label>
+          </section>
+          <button class="submit confirm" id="confirm">更新</button>
+        </div>
 
-        </main>
+        <div class="wordbooks">
+          <h2>単語帳</h2>
+          <div>
+            <p class="bold">LEAPデジタル単語帳</p>
+            <button class="submit" id="leap">ペラペラめくる！</button>
+          </div>
+          <div>
+            <p class="bold">自分の単語帳</p>
+            <button class="submit wordbook" id="wordbook_play">
+              この単語帳から<br />チャレンジできるように設定
+            </button>
+            <div class="registered_words"></div>
+          </div>
+        </div>
 
-        <footer>
-            <p>LEAPの著作権は数研出版等複数の企業に帰属します。</p>
-            <p class="copyrights">©2024 LEAP+</p>
-        </footer>
+        <div class="leap"></div>
+      </main>
+
+      <footer>
+        <p>LEAPの著作権は数研出版等複数の企業に帰属します。</p>
+        <p class="copyrights">©2024 LEAP+</p>
+      </footer>
     </div>
     <script src="./js/main.js?20240508"></script>
-</body>
-
+  </body>
 </html>
