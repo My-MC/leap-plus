@@ -187,7 +187,7 @@ document.querySelector("#leap").addEventListener("click", function () {
     const startIndex = leap.startIndex;
     const endIndex = leap.endIndex;
 
-    wordDataInRange = wordData.filter(
+    const wordDataInRange = wordData.filter(
       (word) =>
         parseInt(word.id) >= parseInt(startIndex) &&
         parseInt(word.id) <= parseInt(endIndex),
@@ -333,6 +333,8 @@ document.getElementById("play").addEventListener("click", function () {
   const playMode = settings.questionType;
   const headerOnly = settings.headerOnly;
   const timeLimit = settings.timeLimit;
+
+  let timer = null
 
   isPlayed = true;
 
@@ -659,12 +661,3 @@ document.getElementById("play").addEventListener("click", function () {
     });
   });
 });
-
-// 配列をシャッフルする関数
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
